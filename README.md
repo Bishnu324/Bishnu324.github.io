@@ -19,96 +19,93 @@
 I’m a **Data Analyst and GIS Expert** passionate about turning raw data into powerful insights through visualization and analysis.  
 I specialize in **Python**, **Power BI**, and **QGIS**, focusing on geospatial and agricultural datasets.
 
-My expertise includes:
-- Data collection, cleaning, and analysis  
-- Interactive dashboards and map-based insights  
-- Predictive modeling and trend visualization  
+✅ Core Skills
+
+-Proficiency in QGIS and Python(pandas,numpy,matplotlib,scikit-learn,geopandas)
+
+-GIS Mapping & Spatial Analysis
+
+-Cartographic Design & Map Production
+
+-Land Use/Land Cover (LULC) Classification & Mapping
+
+-Remote Sensing Data Interpretation (Environmental Applications)
+
+-Data Cleaning, Preprocessing & Exploration (EDA)
+
+-Interactive Dashboards & Visualization (Power BI, QGIS)
+
+
 
 ---
 
 ## 🧠 My Projects  
 
-Perfect 🎯 — since your expertise is in **Data Analytics and GIS**, I’ll list **projects focused on dashboards, spatial data analysis, and geospatial visualization** using **Power BI, Python, and QGIS**.
+---
 
-Here’s a curated list of **realistic and impactful projects** that fit your background and strengthen your GitHub portfolio:
+### 🛰️ **1. Land Use/Land Cover (LULC) Classification and Change Detection — QGIS & GeoPandas**
+
+**Tools:** QGIS, GeoPandas, Python (matplotlib, rasterio)
+
+* Classified satellite imagery to map land cover changes between 2000 and 2020.
+* Used supervised classification in QGIS and automated data processing with GeoPandas.
+* Produced change detection maps showing urban expansion and forest loss.
+  🌍 [View GIS Project](#)
 
 ---
 
-### 🛰️ **1. Land Use/Land Cover Change Detection Dashboard (QGIS + Power BI)**
+### 🌾 **2. Crop Yield Prediction and Environmental Analysis — Python & scikit-learn**
 
-**Tools:** QGIS, Power BI, Excel
+**Tools:** Python (pandas, numpy, scikit-learn, matplotlib)
 
-* Mapped land cover changes using satellite imagery and supervised classification.
-* Integrated geospatial outputs (raster-to-vector) into Power BI for district-wise analytics.
-* Dashboard displayed forest loss, urban growth, and agricultural land trends.
-  🌍 [View Dashboard](#)
-
----
-
-### 🌧️ **2. Rainfall and Crop Yield Analysis Dashboard (Python + Power BI)**
-
-**Tools:** Python (Pandas, Matplotlib), Power BI, CSV datasets
-
-* Combined 20 years of rainfall and yield data from meteorological stations.
-* Built regression models to analyze rainfall–yield relationships.
-* Power BI dashboard showed temporal and spatial rainfall variation patterns.
-  📈 [View Dashboard](#)
+* Built a regression model to predict crop yield using rainfall, temperature, and soil data.
+* Conducted exploratory data analysis (EDA) and visualized key correlations.
+* Delivered predictive insights through clean, interpretable plots.
+  📈 [View Analysis Report](#)
 
 ---
 
-### 🌾 **3. Agricultural Production Insights Dashboard (Power BI + SQL)**
+### 🌧️ **3. Rainfall–Yield Correlation Dashboard — Power BI + QGIS**
 
-**Tools:** Power BI, SQL, Excel
+**Tools:** Power BI, QGIS, Excel
 
-* Created a multi-page Power BI dashboard to analyze crop production trends.
-* Used SQL for data cleaning and joining across crop, area, and yield tables.
-* Dashboard featured filters by crop type, region, and year for better insights.
+* Combined spatial rainfall data with agricultural yield records.
+* Designed a Power BI dashboard visualizing rainfall patterns, yield variation, and regional trends.
+* Integrated QGIS maps for spatial filtering within Power BI visuals.
   💡 [View Dashboard](#)
 
 ---
 
-### 🗺️ **4. Spatial Analysis of Soil Fertility in Nepal (QGIS + Python)**
+### 🗺️ **4. Spatial Analysis of Soil Fertility and Crop Suitability — QGIS + Python**
 
-**Tools:** QGIS, Python (GeoPandas), Shapefiles
+**Tools:** QGIS, GeoPandas, Matplotlib
 
-* Analyzed soil nutrient data spatially to identify low-fertility regions.
-* Generated thematic maps for NPK levels and overlayed with crop suitability zones.
-* Created high-resolution maps for agricultural policy recommendations.
-  🧭 [View GIS Map](#)
+* Created spatial layers for soil nutrients (NPK) and overlayed them with crop suitability maps.
+* Used Python for attribute analysis and correlation with crop yield datasets.
+* Generated thematic maps to support sustainable fertilizer management.
+  🧭 [Explore Map](#)
 
 ---
 
-### 🌍 **5. Climate and Crop Correlation Map Dashboard (QGIS + Power BI)**
+### 📊 **5. Interactive Agricultural Data Dashboard — Power BI**
 
-**Tools:** QGIS, Power BI, Excel
+**Tools:** Power BI, SQL, Excel
 
-* Combined climate raster layers (temperature, rainfall) with yield data.
-* Built an interactive dashboard linking GIS maps with crop yield visuals.
-* Enabled users to explore climate–yield interactions by district and crop.
+* Developed an interactive dashboard integrating crop yield, rainfall, and pesticide data.
+* Added filtering by district, year, and crop type for dynamic exploration.
+* Improved policy insight generation through clear visual storytelling.
   📊 [View Dashboard](#)
 
 ---
 
-### 🚜 **6. Precision Agriculture Mapping and NDVI Visualization (Google Earth Engine + QGIS)**
+### 🌍 **6. Remote Sensing and Environmental Monitoring — Google Earth Engine + QGIS**
 
-**Tools:** Google Earth Engine, QGIS
+**Tools:** GEE, QGIS, Python
 
-* Processed satellite imagery for NDVI computation and crop health assessment.
-* Mapped vegetation changes during different growth stages.
-* Exported layers and visualized them using custom QGIS symbology.
-  🛰️ [View Map](#)
-
----
-
-## 🧰 Technical Skillset  
-
-| **Category** | **Tools & Technologies** |
-|---------------|--------------------------|
-| 🧭 **GIS & Remote Sensing** | QGIS,Geopandas, Google Earth Engine |
-| 📊 **Data Visualization** | Power BI|
-| 🐍 **Programming** | Python (Pandas, NumPy, Matplotlib, scikit-learn, Geopandas) |
-| 💻 **Design & Tools** | Canva |
-| 📈 **Statistical Analysis** | Regression, Correlation, Hypothesis Testing |
+* Processed Sentinel-2 imagery for NDVI and vegetation health monitoring.
+* Detected environmental changes over agricultural landscapes.
+* Exported raster layers to QGIS for advanced visualization and reporting.
+  🛰️ [View Satellite Map](#)
 
 ---
 
