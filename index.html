@@ -108,20 +108,20 @@
         }
 
         section {
-            padding: 50px 0;
+            padding: 40px 0;
         }
 
         h2 {
             font-size: 2rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             color: #1e3c72;
             border-bottom: 2px solid #eaeaea;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
 
         .about-content {
             background-color: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
@@ -151,9 +151,10 @@
         }
 
         .skill-category li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             padding-left: 20px;
             position: relative;
+            font-size: 0.95rem;
         }
 
         .skill-category li:before {
@@ -166,7 +167,7 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-            gap: 30px;
+            gap: 25px;
         }
 
         .project-card {
@@ -178,46 +179,47 @@
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
         }
 
         .project-header {
-            padding: 20px;
+            padding: 18px;
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
         }
 
         .project-header h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 5px;
         }
 
         .project-body {
-            padding: 20px;
+            padding: 18px;
         }
 
         .project-tools {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
+            gap: 6px;
+            margin-top: 12px;
         }
 
         .tool-tag {
             background-color: #e9ecef;
-            padding: 5px 10px;
+            padding: 4px 8px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
 
         .project-link {
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 12px;
             color: #1e3c72;
             font-weight: 500;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-size: 0.9rem;
         }
 
         .project-link:hover {
@@ -225,26 +227,29 @@
             text-decoration: underline;
         }
 
-        /* Contact Form Styles */
+        /* Contact Form Styles - Compact */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 30px;
         }
 
         .contact-info {
             background-color: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 200px;
         }
 
         .contact-badges {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
@@ -259,29 +264,30 @@
 
         .contact-form {
             background-color: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 500;
             color: #333;
+            font-size: 0.9rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: border-color 0.3s ease;
         }
 
@@ -292,7 +298,7 @@
         }
 
         .form-group textarea {
-            min-height: 120px;
+            min-height: 100px;
             resize: vertical;
         }
 
@@ -300,28 +306,28 @@
             display: inline-block;
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 12px 30px;
+            padding: 10px 25px;
             border: none;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 60, 114, 0.3);
         }
 
         footer {
             text-align: center;
-            padding: 30px 0;
+            padding: 25px 0;
             background-color: #1e3c72;
             color: white;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
-            margin-top: 50px;
+            margin-top: 40px;
         }
 
         @media (max-width: 768px) {
@@ -331,6 +337,7 @@
             
             .contact-container {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
             h1 {
@@ -348,6 +355,15 @@
             
             .nav-links {
                 gap: 15px;
+            }
+            
+            section {
+                padding: 30px 0;
+            }
+            
+            .contact-info {
+                min-height: auto;
+                padding: 20px;
             }
         }
     </style>
@@ -581,7 +597,6 @@
             <h2>📬 Contact Me</h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Interested in collaborating or have questions about my work? I'd love to hear from you!</h3>
                     <div class="contact-badges">
                         <a href="https://www.linkedin.com/in/contactbishnupant" target="_blank" title="LinkedIn" class="contact-badge">
                             <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&logoColor=white" />
