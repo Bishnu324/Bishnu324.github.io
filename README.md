@@ -61,7 +61,7 @@ I specialize in **Python**, **Power BI**, and **QGIS**, focusing on geospatial a
 * Built a regression model to predict crop yield using rainfall, temperature, and soil data.
 * Conducted exploratory data analysis (EDA) and visualized key correlations.
 * Delivered predictive insights through clean, interpretable plots.
-  📈 [View Analysis Report](#)
+  📈 [https://github.com/Bishnu324/Machine-learning-crop-yield-prediction/commit/aa308227f752b1b15914bdaf94c44bc02351b956](#)
 
 ---
 
