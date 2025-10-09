@@ -58,30 +58,11 @@
 
         .badge {
             display: inline-block;
-            padding: 8px 16px;
-            border-radius: 50px;
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
         }
 
         .badge:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .linkedin {
-            background-color: #0A66C2;
-        }
-
-        .github {
-            background-color: #333;
-        }
-
-        .email {
-            background-color: #D14836;
         }
 
         /* Navigation Styles */
@@ -256,21 +237,24 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
         }
 
-        .contact-info a {
-            display: block;
-            margin-bottom: 15px;
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            padding: 10px;
-            border-radius: 5px;
+        .contact-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
 
-        .contact-info a:hover {
-            background-color: #f0f5ff;
-            color: #1e3c72;
+        .contact-badge {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-badge:hover {
+            transform: translateY(-3px);
         }
 
         .contact-form {
@@ -386,9 +370,15 @@
             <h1>💼 Bishnu Datta Pant</h1>
             <h3>Data Analyst | GIS Expert</h3>
             <div class="badges">
-                <a href="https://www.linkedin.com/in/contactbishnupant" target="_blank" class="badge linkedin">LinkedIn</a>
-                <a href="https://github.com/Bishnu324" target="_blank" class="badge github">GitHub</a>
-                <a href="mailto:pantb813@gmail.com" class="badge email">Email</a>
+                <a href="https://www.linkedin.com/in/contactbishnupant" target="_blank" class="badge" title="LinkedIn">
+                    <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&logoColor=white" />
+                </a>
+                <a href="https://github.com/Bishnu324" target="_blank" class="badge" title="GitHub">
+                    <img src="https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white" />
+                </a>
+                <a href="mailto:pantb813@gmail.com" class="badge" title="Email">
+                    <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" />
+                </a>
             </div>
         </div>
     </header>
@@ -592,9 +582,17 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Interested in collaborating or have questions about my work? I'd love to hear from you!</h3>
-                    <a href="mailto:pantb813@gmail.com">📧 pantb813@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/contactbishnupant">💼 LinkedIn</a>
-                    <a href="https://github.com/Bishnu324">🐙 GitHub</a>
+                    <div class="contact-badges">
+                        <a href="https://www.linkedin.com/in/contactbishnupant" target="_blank" title="LinkedIn" class="contact-badge">
+                            <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&logoColor=white" />
+                        </a>
+                        <a href="https://github.com/Bishnu324" target="_blank" title="GitHub" class="contact-badge">
+                            <img src="https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white" />
+                        </a>
+                        <a href="mailto:pantb813@gmail.com" title="Email" class="contact-badge">
+                            <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" />
+                        </a>
+                    </div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
