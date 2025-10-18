@@ -10,7 +10,335 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <!-- Local stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #2c5530;
+      --primary-light: #4a7c59;
+      --secondary: #f8f9fa;
+      --accent: #e76f51;
+      --text: #333;
+      --text-light: #6c757d;
+      --white: #fff;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--secondary);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    h2 {
+      font-size: 2rem;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--accent);
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.9rem;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    .site-header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 1.5rem 0;
+      box-shadow: var(--shadow);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .name {
+      font-size: 1.8rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .title {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .social a {
+      color: var(--white);
+      font-size: 1.3rem;
+      margin-left: 1rem;
+      transition: var(--transition);
+    }
+
+    .social a:hover {
+      color: var(--accent);
+    }
+
+    /* About Section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-left {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-photo {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--primary-light);
+      box-shadow: var(--shadow);
+    }
+
+    .about-right {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-figure {
+      margin: 0;
+    }
+
+    .project-figure img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-figure figcaption {
+      padding: 1.5rem;
+    }
+
+    .project-figure h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-figure p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .project-actions {
+      padding: 0 1.5rem 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .skill h4 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .skill ul {
+      list-style-type: none;
+    }
+
+    .skill li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .skill li:last-child {
+      border-bottom: none;
+    }
+
+    /* Contact Section */
+    .contact-form {
+      max-width: 600px;
+    }
+
+    .row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .row input {
+      flex: 1;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .contact-form button {
+      margin-top: 1rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .lb-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    #lb-img {
+      max-width: 100%;
+      max-height: 80vh;
+      display: block;
+    }
+
+    #lb-caption {
+      color: var(--white);
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .social a {
+        margin: 0 0.5rem;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -32,12 +360,13 @@
     <!-- About -->
     <section id="about" class="section about">
       <div class="about-left">
-        <img src="https://github.com/Bishnu324/Bishnu324.io/blob/main/Profile.jpg" alt="Bishnu profile" class="profile-photo">
+        <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.io/main/Profile.jpg" alt="Bishnu Datta Pant" class="profile-photo">
       </div>
       <div class="about-right">
         <h2>About Me</h2>
-        <p>I'm Bishnu Datta Pant — a data analyst with an agriculture and GIS background. I specialize in turning agricultural and environmental datasets into actionable insights using Python, Power BI, and GIS tools.</p>
-        <p>Below are selected projects and dashboards showcasing spatial analysis, LULC change detection, and socio-economic visualizations.</p>
+        <p>I'm Bishnu Datta Pant — an experienced Data Analyst and GIS enthusiast with expertise in transforming complex datasets into actionable insights through Python, Power BI, and GIS tools. My unique blend of data analytics and agriculture/environmental domain knowledge allows me to deliver impactful solutions across diverse projects.</p>
+        <p>I hold a Bachelor's Degree in Agricultural Science from the Institute of Agriculture and Animal Science, Tribhuvan University, and I'm passionate about applying data analysis to agricultural and environmental challenges.</p>
+        <p>Below are selected projects and dashboards showcasing spatial analysis, LULC change detection, and business intelligence visualizations.</p>
       </div>
     </section>
 
@@ -46,63 +375,123 @@
       <h2>Projects</h2>
       <div class="projects-grid">
 
-        <!-- Project card: Mount Everest / Socio-Economic Analysis -->
+        <!-- Project card: Domino's Sales Dashboard -->
         <article class="project-card">
           <figure class="project-figure">
-            <img src="https://github.com/Bishnu324/Himalayan-data-analysis/blob/main/Mount%20everest_page-0001.jpg" alt="Socio-Economic Analysis dashboard" loading="lazy">
+            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/1739628784617.jpeg" alt="Domino's Sales Dashboard" loading="lazy">
             <figcaption>
-              <h3>Socio-Economic Analysis (Dashboard)</h3>
-              <p>Power BI dashboard visualizing nationality, age groups, and membership breakdowns.</p>
+              <h3>Domino's Sales Dashboard</h3>
+              <p>Comprehensive Power BI dashboard analyzing Domino's sales performance, customer trends, and product insights to drive business decisions.</p>
             </figcaption>
           </figure>
           <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://github.com/Bishnu324/Himalayan-data-analysis/blob/main/Mount%20everest_page-0001.jpg">Preview</button>
-            <a class="btn" href="https://github.com/Bishnu324/demo-resume-1/blob/main/README.md" target="_blank">Docs</a>
+            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/1739628784617.jpeg" data-caption="Domino's Sales Dashboard">Preview</button>
+            <a class="btn" href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/1739628784617.jpeg" target="_blank">View Details</a>
+          </div>
+        </article>
+
+        <!-- Project card: Mobile Sales Dashboard -->
+        <article class="project-card">
+          <figure class="project-figure">
+            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/market%20sales_page-0003.jpg" alt="Mobile Sales Dashboard" loading="lazy">
+            <figcaption>
+              <h3>Mobile Sales Dashboard</h3>
+              <p>Interactive Power BI dashboard tracking mobile device sales performance, market trends, and regional distribution patterns.</p>
+            </figcaption>
+          </figure>
+          <div class="project-actions">
+            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/market%20sales_page-0003.jpg" data-caption="Mobile Sales Dashboard">Preview</button>
+            <a class="btn" href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/market%20sales_page-0003.jpg" target="_blank">View Details</a>
+          </div>
+        </article>
+
+        <!-- Project card: Mount Everest / Socio-Economic Analysis -->
+        <article class="project-card">
+          <figure class="project-figure">
+            <img src="https://raw.githubusercontent.com/Bishnu324/Himalayan-data-analysis/main/Mount%20everest_page-0001.jpg" alt="Socio-Economic Analysis dashboard" loading="lazy">
+            <figcaption>
+              <h3>Socio-Economic Analysis (Dashboard)</h3>
+              <p>Power BI dashboard visualizing nationality, age groups, and membership breakdowns of Himalayan expeditions.</p>
+            </figcaption>
+          </figure>
+          <div class="project-actions">
+            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Himalayan-data-analysis/main/Mount%20everest_page-0001.jpg" data-caption="Socio-Economic Analysis Dashboard">Preview</button>
+            <a class="btn" href="https://github.com/Bishnu324/Himalayan-data-analysis" target="_blank">Docs</a>
           </div>
         </article>
 
         <!-- Project card: Crop Yield Prediction -->
         <article class="project-card">
           <figure class="project-figure">
-            <img src="https://github.com/Bishnu324/Bishnu324.io/blob/main/US-Elec.png" alt="Crop Yield Prediction" loading="lazy">
+            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.io/main/US-Elec.png" alt="Crop Yield Prediction" loading="lazy">
             <figcaption>
               <h3>Crop Yield Prediction</h3>
               <p>Predictive model built with rainfall, temperature and pesticide datasets. Tools: Python, Pandas, Power BI.</p>
             </figcaption>
           </figure>
           <div class="project-actions">
-            <button class="btn preview-btn" data-src="assets/images/project-yield.jpg">Preview</button>
+            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.io/main/US-Elec.png" data-caption="Crop Yield Prediction">Preview</button>
             <a class="btn" href="https://github.com/bishnudattapant/crop-yield-prediction" target="_blank">Docs</a>
-          </div>
-        </article>
-
-        <!-- Project card: LULC Analysis -->
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="assets/images/project-lulc.jpg" alt="LULC Analysis" loading="lazy">
-            <figcaption>
-              <h3>LULC Change Detection</h3>
-              <p> Sentinel-2-based LULC classification and change detection to monitor agricultural expansion.</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="assets/images/project-lulc.jpg">Preview</button>
-            <a class="btn" href="https://github.com/bishnudattapant/lulc-analysis" target="_blank">Docs</a>
           </div>
         </article>
 
         <!-- Project card: GIS Dashboard -->
         <article class="project-card">
           <figure class="project-figure">
-            <img src="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/mapping.jpg" alt="GIS Dashboard" loading="lazy">
+            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/mapping.jpg" alt="GIS Dashboard" loading="lazy">
             <figcaption>
               <h3>GIS Agricultural Dashboard</h3>
               <p>Power BI dashboard integrating shapefiles and crop data to show production and land use trends.</p>
             </figcaption>
           </figure>
           <div class="project-actions">
-            <button class="btn preview-btn" data-src="assets/images/project-gis-dashboard.jpg">Preview</button>
+            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/mapping.jpg" data-caption="GIS Agricultural Dashboard">Preview</button>
             <a class="btn" href="https://github.com/bishnudattapant/gis-dashboard" target="_blank">Docs</a>
+          </div>
+        </article>
+
+        <!-- Project card: LULC Analysis -->
+        <article class="project-card">
+          <figure class="project-figure">
+            <img src="https://via.placeholder.com/400x200/4a7c59/ffffff?text=LULC+Analysis" alt="LULC Analysis" loading="lazy">
+            <figcaption>
+              <h3>LULC Change Detection</h3>
+              <p>Sentinel-2-based LULC classification and change detection to monitor agricultural expansion.</p>
+            </figcaption>
+          </figure>
+          <div class="project-actions">
+            <button class="btn preview-btn" data-src="https://via.placeholder.com/800x400/4a7c59/ffffff?text=LULC+Analysis" data-caption="LULC Change Detection">Preview</button>
+            <a class="btn" href="https://github.com/bishnudattapant/lulc-analysis" target="_blank">Docs</a>
+          </div>
+        </article>
+
+        <!-- Project card: Walnut Production Analysis -->
+        <article class="project-card">
+          <figure class="project-figure">
+            <img src="https://via.placeholder.com/400x200/2c5530/ffffff?text=Walnut+Analysis" alt="Walnut Production Analysis" loading="lazy">
+            <figcaption>
+              <h3>Economic Production and Marketing of Walnut</h3>
+              <p>Analyzed economic production and marketing strategies for walnuts in Darchula District, Nepal.</p>
+            </figcaption>
+          </figure>
+          <div class="project-actions">
+            <button class="btn preview-btn" data-src="https://via.placeholder.com/800x400/2c5530/ffffff?text=Walnut+Production+Analysis" data-caption="Walnut Production Analysis">Preview</button>
+            <a class="btn" href="#" target="_blank">Docs</a>
+          </div>
+        </article>
+
+        <!-- Project card: Rice Landraces Performance -->
+        <article class="project-card">
+          <figure class="project-figure">
+            <img src="https://via.placeholder.com/400x200/e76f51/ffffff?text=Rice+Landraces" alt="Rice Landraces Performance" loading="lazy">
+            <figcaption>
+              <h3>Rice Landraces Performance Analysis</h3>
+              <p>Evaluated the performance of rice landraces under rainfed conditions for yield and yield-related traits.</p>
+            </figcaption>
+          </figure>
+          <div class="project-actions">
+            <button class="btn preview-btn" data-src="https://via.placeholder.com/800x400/e76f51/ffffff?text=Rice+Landraces+Performance" data-caption="Rice Landraces Performance Analysis">Preview</button>
+            <a class="btn" href="#" target="_blank">Docs</a>
           </div>
         </article>
 
@@ -141,6 +530,47 @@
             <li>ETL Processes</li>
           </ul>
         </div>
+
+        <div class="skill">
+          <h4>GIS & Remote Sensing</h4>
+          <ul>
+            <li>QGIS</li>
+            <li>Land Management</li>
+            <li>Spatial Analysis</li>
+            <li>LULC Classification</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section id="experience" class="section">
+      <h2>Experience & Education</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <h4>Education</h4>
+          <ul>
+            <li><strong>Bachelors in Agricultural Science</strong><br>Institute of Agriculture and Animal Science, TU (2019-2023)</li>
+            <li><strong>Intermediate (High School)</strong><br>National Academy of Science and Technology (2016-2018)</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h4>Professional Experience</h4>
+          <ul>
+            <li><strong>Social Media Intern</strong><br>Agricultural Technology Center, Lalitpur (Mar-Jul 2025)</li>
+            <li><strong>Global Virtual Internship</strong><br>IIDE (Jun 2024)</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h4>Certifications</h4>
+          <ul>
+            <li>QGIS for Land Management (Sep 2024)</li>
+            <li>Data Science using Python (Feb 2025)</li>
+            <li>Power BI for Beginners (Oct 2024)</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -174,7 +604,39 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    // Lightbox functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const lbCaption = document.getElementById('lb-caption');
+      const lbClose = document.getElementById('lb-close');
+      const previewBtns = document.querySelectorAll('.preview-btn');
+      
+      // Open lightbox
+      previewBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const imgSrc = this.getAttribute('data-src');
+          const caption = this.getAttribute('data-caption');
+          
+          lbImg.src = imgSrc;
+          lbCaption.textContent = caption;
+          lightbox.classList.add('active');
+        });
+      });
+      
+      // Close lightbox
+      lbClose.addEventListener('click', function() {
+        lightbox.classList.remove('active');
+      });
+      
+      // Close lightbox when clicking outside the image
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+          lightbox.classList.remove('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
