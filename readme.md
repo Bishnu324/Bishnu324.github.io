@@ -26,7 +26,7 @@
   <a href="mailto:pantb813@gmail.com">
     <img src="https://img.shields.io/badge/Email-green?style=for-the-badge&logo=gmail" alt="Email">
   </a>
-  <a href="https://github.com/Bishnu324/BishnuDattaPant_CV.pdf" download>
+  <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/Copy%20of%20CURRICULUM%20VITAE%20(1).pdf" download>
     <img src="https://img.shields.io/badge/Download%20CV-PDF-orange?style=for-the-badge" alt="Download CV">
   </a>
 </p>
