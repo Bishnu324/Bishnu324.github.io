@@ -65,9 +65,8 @@ When I'm not analyzing data, I enjoy exploring agritechnology and designing visu
 - **Geospatial Analysis**: QGIS, Python(geopandas),GEE
 - **Productivity Tools**: Microsoft Office Suite (Excel, PowerPoint), Canva
 
-
-<div align="center">
 ### **Skills**
+<div align="center">
 <p align="center">
   <img src="https://img.shields.io/badge/QGIS-Intermediate-589632?style=for-the-badge&logo=qgis" alt="QGIS" />
    <img src="https://img.shields.io/badge/ArcGIS-Beginner-3776AB?style=for-the-badge&logo=ArcGIS" alt="ArcGIS" />
