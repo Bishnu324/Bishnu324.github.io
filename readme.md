@@ -37,8 +37,6 @@
 
 I'm an experienced Data Analyst and Geospatial Enthusiast specializing in transforming complex datasets into actionable insights using Python, Power BI, and GIS tools. My unique blend of data analytics and agriculture/environmental domain knowledge allows me to deliver impactful solutions across diverse projects.
 
-When I'm not analyzing data, I enjoy exploring agritechnology and designing visualizations that bring data to life.
-
 ---
 
 <div align="center">
@@ -62,8 +60,8 @@ When I'm not analyzing data, I enjoy exploring agritechnology and designing visu
 
 ### **Core Competencies**
 - **Data Analysis & Visualization**: Power BI, Python 
-- **Geospatial Analysis**: QGIS, Python(geopandas),GEE
-- **Productivity Tools**: Microsoft Office Suite (Excel, PowerPoint), Canva
+- **Geospatial Analysis**: QGIS, Python(geopandas),GEE,ArcGIS
+- **Productivity Tools**: Microsoft Office Suite (Excel, PowerPoint)
 
 ### **Skills**
 <div align="center">
@@ -113,14 +111,14 @@ When I'm not analyzing data, I enjoy exploring agritechnology and designing visu
 
 ## 📝 Publications
 
-1. **Economic production and marketing of Walnut in Darchula District, Nepal**  
-   *[https://doi.org/10.1000/xyz123](https://doi.org/10.1000/xyz123)*
+1. *Economic Perspectives on Walnut Production and Trade in Darchula District of Nepal**  
+   *[https://doi.org/10.1000/xyz123](https://doi.org/10.9734/ajaar/2025/v25i5622)*
 
-2. **Performance of Rice Landraces for Yield and Yield-Related Traits in Rainfed Conditions**  
-   *[https://doi.org/10.1000/abc456](https://doi.org/10.1000/abc456)*
+2. **Evaluation of Rice Landraces for Yield and Related Traits Under Rainfed Conditions in Nepal**  
+   *[https://doi.org/10.1000/abc456](https://doi.org/10.59983/s2025030205)*
 
 3. **Nanotechnology in Agriculture: A Review of Innovations in Crop Protection and Food Security**  
-   *[https://doi.org/10.1000/def789](https://doi.org/10.1000/def789)*
+   *[https://doi.org/10.1000/def789](https://doi.org/10.1155/aia/8892001)*
 
 ---
 
