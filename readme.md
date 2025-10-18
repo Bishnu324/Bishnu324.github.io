@@ -66,11 +66,11 @@ When I'm not analyzing data, I enjoy exploring agritechnology and designing visu
 - **Productivity Tools**: Microsoft Office Suite (Excel, PowerPoint), Canva
 
 
-**Skills**
 <div align="center">
 ### **Skills**
 <p align="center">
   <img src="https://img.shields.io/badge/QGIS-Intermediate-589632?style=for-the-badge&logo=qgis" alt="QGIS" />
+   <img src="https://img.shields.io/badge/ArcGIS-Beginner-3776AB?style=for-the-badge&logo=ArcGIS" alt="ArcGIS" />
   <img src="https://img.shields.io/badge/Python-Intermediate-3776AB?style=for-the-badge&logo=python" alt="Python" />
   <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi" alt="Power BI" />
   <img src="https://img.shields.io/badge/Microsoft%20Office-217346?style=for-the-badge&logo=microsoft-office" alt="Microsoft Office(Excel and power point)" />
