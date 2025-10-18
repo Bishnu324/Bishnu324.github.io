@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-  <!-- Local stylesheet -->
   <style>
     /* Reset and base styles */
     * {
@@ -92,12 +91,26 @@
       transform: translateY(-2px);
     }
 
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
     /* Header */
     .site-header {
       background-color: var(--primary);
       color: var(--white);
       padding: 1.5rem 0;
       box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .header-inner {
@@ -125,6 +138,36 @@
 
     .social a:hover {
       color: var(--accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(44, 85, 48, 0.9), rgba(44, 85, 48, 0.8)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      text-align: center;
+      padding: 6rem 0;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     /* About Section */
@@ -239,6 +282,52 @@
       border-bottom: none;
     }
 
+    /* Experience & Education */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: var(--primary-light);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 70px;
+    }
+
+    .timeline-date {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      text-align: center;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .timeline-content {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-content h4 {
+      margin-bottom: 0.5rem;
+    }
+
     /* Contact Section */
     .contact-form {
       max-width: 600px;
@@ -337,6 +426,14 @@
       .row {
         flex-direction: column;
       }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -355,6 +452,17 @@
       </nav>
     </div>
   </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Transforming Data into Actionable Insights</h1>
+      <p>Expert in GIS analysis, Python data science, and interactive visualization for agricultural and environmental applications</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+  </section>
 
   <main class="container">
     <!-- About -->
@@ -465,36 +573,6 @@
           </div>
         </article>
 
-        <!-- Project card: Walnut Production Analysis -->
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://via.placeholder.com/400x200/2c5530/ffffff?text=Walnut+Analysis" alt="Walnut Production Analysis" loading="lazy">
-            <figcaption>
-              <h3>Economic Production and Marketing of Walnut</h3>
-              <p>Analyzed economic production and marketing strategies for walnuts in Darchula District, Nepal.</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://via.placeholder.com/800x400/2c5530/ffffff?text=Walnut+Production+Analysis" data-caption="Walnut Production Analysis">Preview</button>
-            <a class="btn" href="#" target="_blank">Docs</a>
-          </div>
-        </article>
-
-        <!-- Project card: Rice Landraces Performance -->
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://via.placeholder.com/400x200/e76f51/ffffff?text=Rice+Landraces" alt="Rice Landraces Performance" loading="lazy">
-            <figcaption>
-              <h3>Rice Landraces Performance Analysis</h3>
-              <p>Evaluated the performance of rice landraces under rainfed conditions for yield and yield-related traits.</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://via.placeholder.com/800x400/e76f51/ffffff?text=Rice+Landraces+Performance" data-caption="Rice Landraces Performance Analysis">Preview</button>
-            <a class="btn" href="#" target="_blank">Docs</a>
-          </div>
-        </article>
-
       </div> <!-- .projects-grid -->
     </section>
 
@@ -503,40 +581,46 @@
       <h2>Technical Skillset</h2>
       <div class="skills-grid">
         <div class="skill">
-          <h4>Data Visualization</h4>
+          <h4>Core Skills</h4>
           <ul>
-             <li>QGIS</li>
-             <li>Arc GIS</li>
-             <li>Power BI</li>
-           
+            <li>Proficiency in Python and QGIS</li>
+            <li>GIS Mapping & Spatial Analysis</li>
+            <li>Cartographic Design & Map Production</li>
+            <li>Land Use/Land Cover (LULC) Classification & Mapping</li>
+            <li>Remote Sensing Data Interpretation (Environmental Applications)</li>
+            <li>Data Cleaning, Preprocessing & Exploration (EDA)</li>
+            <li>Interactive Dashboards & Visualization</li>
           </ul>
         </div>
 
         <div class="skill">
-          <h4>Data preprocessing and cleaning </h4>
+          <h4>Python Libraries</h4>
           <ul>
-            <li>Python (Pandas, NumPy, Matplotlib, GeoPandas)</li>
-            <li>Excel</li>
+            <li>pandas</li>
+            <li>NumPy</li>
+            <li>scikit-learn</li>
+            <li>matplotlib</li>
+            <li>seaborn</li>
+            <li>GeoPandas</li>
           </ul>
         </div>
 
         <div class="skill">
-          <h4>Data Modeling & ETL</h4>
+          <h4>Tools & Technologies</h4>
+          <ul>
+            <li><strong>Languages:</strong> Python</li>
+            <li><strong>Visualization:</strong> Power BI, MS Excel</li>
+            <li><strong>GIS & Mapping:</strong> QGIS, GeoPandas</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h4>Data Analysis & Modeling</h4>
           <ul>
             <li>Power Query (M)</li>
             <li>DAX</li>
             <li>Star Schema Design</li>
             <li>ETL Processes</li>
-          </ul>
-        </div>
-
-        <div class="skill">
-          <h4>GIS & Remote Sensing</h4>
-          <ul>
-            <li>QGIS and ArcGIS</li>
-            <li>Land Management</li>
-            <li>Spatial Analysis</li>
-            <li>LULC Classification</li>
           </ul>
         </div>
       </div>
@@ -545,30 +629,37 @@
     <!-- Experience & Education -->
     <section id="experience" class="section">
       <h2>Experience & Education</h2>
-      <div class="skills-grid">
-        <div class="skill">
-          <h4>Education</h4>
-          <ul>
-            <li><strong> Bachelor's in Agricultural Science</strong><br>Institute of Agriculture and Animal Science, TU (2019-2023)</li>
-            <li><strong>Intermediate (High School)</strong><br>National Academy of Science and Technology (2016-2018)</li>
-          </ul>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2019-2023</div>
+          <div class="timeline-content">
+            <h4>Bachelor's in Agricultural Science</h4>
+            <p>Institute of Agriculture and Animal Science, Tribhuvan University</p>
+          </div>
         </div>
-
-        <div class="skill">
-          <h4>Professional Experience</h4>
-          <ul>
-            <li><strong>Social Media Intern</strong><br>Agricultural Technology Center, Lalitpur (Mar-Jul 2025)</li>
-            <li><strong>Global Virtual Internship</strong><br>IIDE (Jun 2024)</li>
-          </ul>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2025</div>
+          <div class="timeline-content">
+            <h4>Social Media Intern</h4>
+            <p>Agricultural Technology Center, Lalitpur (Mar-Jul 2025)</p>
+          </div>
         </div>
-
-        <div class="skill">
-          <h4>Certifications</h4>
-          <ul>
-            <li>QGIS for Land Management (Sep 2024)</li>
-            <li>Data Science using Python (Feb 2025)</li>
-            <li>Power BI for Beginners (Oct 2024)</li>
-          </ul>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2024</div>
+          <div class="timeline-content">
+            <h4>Global Virtual Internship</h4>
+            <p>IIDE (Jun 2024)</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2016-2018</div>
+          <div class="timeline-content">
+            <h4>Intermediate (High School)</h4>
+            <p>National Academy of Science and Technology</p>
+          </div>
         </div>
       </div>
     </section>
