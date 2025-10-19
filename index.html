@@ -92,12 +92,26 @@
       transform: translateY(-2px);
     }
 
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
     /* Header */
     .site-header {
       background-color: var(--primary);
       color: var(--white);
       padding: 1.5rem 0;
       box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .header-inner {
@@ -154,6 +168,12 @@
     .about-right {
       flex: 2;
       min-width: 300px;
+    }
+
+    .about-actions {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
     }
 
     /* Projects Section */
@@ -337,6 +357,10 @@
       .row {
         flex-direction: column;
       }
+      
+      .about-actions {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -351,7 +375,7 @@
       <nav class="social">
         <a href="https://www.linkedin.com/in/bishnudattapant" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/bishnudattapant" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/CURRICULUM%20VITAE%20(1).pdf" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
+        <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/CURRICULUM%20VITAE%20(1).pdf" download="Bishnu_Datta_Pant_CV.pdf" title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
       </nav>
     </div>
   </header>
@@ -367,6 +391,10 @@
         <p>I'm Bishnu Datta Pant — an experienced Data Analyst and GIS enthusiast with expertise in transforming complex datasets into actionable insights through Python, Power BI, and GIS tools. My unique blend of data analytics and agriculture/environmental domain knowledge allows me to deliver impactful solutions across diverse projects.</p>
         <p>I hold a Bachelor's Degree in Agricultural Science from the Institute of Agriculture and Animal Science, Tribhuvan University, and I'm passionate about applying data analysis to agricultural and environmental challenges.</p>
         <p>Below are selected projects and dashboards showcasing spatial analysis, Mapping, LULC change detection, and business intelligence visualizations.</p>
+        <div class="about-actions">
+          <a href="#projects" class="btn">View My Projects</a>
+          <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/CURRICULUM%20VITAE%20(1).pdf" download="Bishnu_Datta_Pant_CV.pdf" class="btn btn-outline">Download CV</a>
+        </div>
       </div>
     </section>
 
@@ -455,7 +483,7 @@
           <figure class="project-figure">
             <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/mapping.jpg" alt="GIS Dashboard" loading="lazy">
             <figcaption>
-              <h3>GIS Geo-referencing/h3>
+              <h3>GIS Geo-referencing</h3>
               <p>Geo-referencing using shapefiles and crop data to show production and land use trends.</p>
             </figcaption>
           </figure>
@@ -569,6 +597,9 @@
     <section id="contact" class="section">
       <h2>Contact</h2>
       <form action="https://formsubmit.co/bishnudattapant@gmail.com" method="POST" class="contact-form">
+        <input type="hidden" name="_subject" value="New portfolio contact message">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <div class="row">
           <input type="text" name="name" placeholder="Your name" required>
           <input type="email" name="email" placeholder="Your email" required>
@@ -583,6 +614,9 @@
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2025 Bishnu Datta Pant. All rights reserved.</p>
+      <p style="margin-top: 1rem;">
+        <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/CURRICULUM%20VITAE%20(1).pdf" download="Bishnu_Datta_Pant_CV.pdf" class="btn btn-outline" style="color: white; border-color: white;">Download CV</a>
+      </p>
     </div>
   </footer>
 
