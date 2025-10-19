@@ -130,15 +130,24 @@
       opacity: 0.9;
     }
 
+    .social {
+      display: flex;
+      gap: 0.6rem;
+    }
+
     .social a {
-      color: var(--white);
-      font-size: 1.3rem;
-      margin-left: 1rem;
+      display: inline-block;
       transition: var(--transition);
+      border-radius: 4px;
     }
 
     .social a:hover {
-      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .social img {
+      height: 22px; /* Reduced from 28px */
+      border-radius: 4px;
     }
 
     /* About Section */
@@ -295,6 +304,27 @@
       padding: 2rem 0;
     }
 
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .footer-social a {
+      display: inline-block;
+      transition: var(--transition);
+    }
+
+    .footer-social a:hover {
+      transform: translateY(-3px);
+    }
+
+    .footer-social img {
+      height: 28px; /* Keep original size in footer */
+      border-radius: 4px;
+    }
+
     /* Lightbox */
     .lightbox {
       position: fixed;
@@ -350,8 +380,12 @@
         gap: 1rem;
       }
 
-      .social a {
-        margin: 0 0.5rem;
+      .social {
+        gap: 0.8rem;
+      }
+
+      .social img {
+        height: 24px; /* Slightly larger on mobile for better touch targets */
       }
 
       .row {
@@ -373,9 +407,18 @@
       </div>
 
       <nav class="social">
-        <a href="https://www.linkedin.com/in/bishnudattapant" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/bishnudattapant" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/CURRICULUM%20VITAE%20(1).pdf" download="Bishnu_Datta_Pant_CV.pdf" title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
+        <a href="https://www.linkedin.com/in/contactbishnupant" target="_blank" title="LinkedIn">
+          <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/Bishnu324" target="_blank" title="GitHub">
+          <img src="https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white" alt="GitHub" />
+        </a>
+        <a href="mailto:pantb813@gmail.com" title="Email">
+          <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" />
+        </a>
+        <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/CURRICULUM%20VITAE%20(1).pdf" download="Bishnu_Datta_Pant_CV.pdf" title="Download CV">
+          <img src="https://img.shields.io/badge/CV-Download-green?style=flat&logo=adobeacrobatreader&logoColor=white" alt="Download CV" />
+        </a>
       </nav>
     </div>
   </header>
@@ -393,7 +436,6 @@
         <p>Below are selected projects and dashboards showcasing spatial analysis, Mapping, LULC change detection, and business intelligence visualizations.</p>
         <div class="about-actions">
           <a href="#projects" class="btn">View My Projects</a>
-          <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/CURRICULUM%20VITAE%20(1).pdf" download="Bishnu_Datta_Pant_CV.pdf" class="btn btn-outline">Download CV</a>
         </div>
       </div>
     </section>
@@ -614,6 +656,22 @@
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2025 Bishnu Datta Pant. All rights reserved.</p>
+      
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/contactbishnupant" target="_blank" title="LinkedIn">
+          <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/Bishnu324" target="_blank" title="GitHub">
+          <img src="https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white" alt="GitHub" />
+        </a>
+        <a href="mailto:pantb813@gmail.com" title="Email">
+          <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" />
+        </a>
+        <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/CURRICULUM%20VITAE%20(1).pdf" download="Bishnu_Datta_Pant_CV.pdf" title="Download CV">
+          <img src="https://img.shields.io/badge/CV-Download-green?style=flat&logo=adobeacrobatreader&logoColor=white" alt="Download CV" />
+        </a>
+      </div>
+      
       <p style="margin-top: 1rem;">
         <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/CURRICULUM%20VITAE%20(1).pdf" download="Bishnu_Datta_Pant_CV.pdf" class="btn btn-outline" style="color: white; border-color: white;">Download CV</a>
       </p>
