@@ -4,11 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bishnu Datta Pant | Data Analyst & GIS Expert</title>
-
   <!-- Google fonts & icons -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
   <!-- Local stylesheet -->
   <style>
     /* Reset and base styles */
@@ -17,7 +15,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     :root {
       --primary: #2c5530;
       --primary-light: #4a7c59;
@@ -29,27 +26,23 @@
       --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       --transition: all 0.3s ease;
     }
-
     body {
       font-family: 'Lato', sans-serif;
       line-height: 1.6;
       color: var(--text);
       background-color: var(--secondary);
     }
-
     h1, h2, h3, h4 {
       font-family: 'Playfair Display', serif;
       margin-bottom: 1rem;
       color: var(--primary);
     }
-
     h2 {
       font-size: 2rem;
       position: relative;
       display: inline-block;
       margin-bottom: 2rem;
     }
-
     h2::after {
       content: '';
       position: absolute;
@@ -59,21 +52,17 @@
       height: 3px;
       background-color: var(--accent);
     }
-
     p {
       margin-bottom: 1rem;
     }
-
     .container {
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
     }
-
     .section {
       padding: 4rem 0;
     }
-
     .btn {
       display: inline-block;
       padding: 0.6rem 1.2rem;
@@ -86,23 +75,19 @@
       transition: var(--transition);
       font-size: 0.9rem;
     }
-
     .btn:hover {
       background-color: var(--primary-light);
       transform: translateY(-2px);
     }
-
     .btn-outline {
       background-color: transparent;
       border: 1px solid var(--primary);
       color: var(--primary);
     }
-
     .btn-outline:hover {
       background-color: var(--primary);
       color: var(--white);
     }
-
     /* Header */
     .site-header {
       background-color: var(--primary);
@@ -113,43 +98,35 @@
       top: 0;
       z-index: 100;
     }
-
     .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
     .name {
       font-size: 1.8rem;
       margin-bottom: 0.2rem;
     }
-
     .title {
       font-size: 1rem;
       opacity: 0.9;
     }
-
     .social {
       display: flex;
       gap: 0.6rem;
     }
-
     .social a {
       display: inline-block;
       transition: var(--transition);
       border-radius: 4px;
     }
-
     .social a:hover {
       transform: translateY(-2px);
     }
-
     .social img {
       height: 22px; /* Reduced from 28px */
       border-radius: 4px;
     }
-
     /* About Section */
     .about {
       display: flex;
@@ -157,14 +134,12 @@
       gap: 2rem;
       align-items: center;
     }
-
     .about-left {
       flex: 1;
       min-width: 300px;
       display: flex;
       justify-content: center;
     }
-
     .profile-photo {
       width: 250px;
       height: 250px;
@@ -173,25 +148,21 @@
       border: 5px solid var(--primary-light);
       box-shadow: var(--shadow);
     }
-
     .about-right {
       flex: 2;
       min-width: 300px;
     }
-
     .about-actions {
       margin-top: 1.5rem;
       display: flex;
       gap: 1rem;
     }
-
     /* Projects Section */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
     }
-
     .project-card {
       background: var(--white);
       border-radius: 8px;
@@ -199,90 +170,73 @@
       box-shadow: var(--shadow);
       transition: var(--transition);
     }
-
     .project-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
-
     .project-figure {
       margin: 0;
     }
-
     .project-figure img {
       width: 100%;
       height: 200px;
       object-fit: cover;
     }
-
     .project-figure figcaption {
       padding: 1.5rem;
     }
-
     .project-figure h3 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
     }
-
     .project-figure p {
       color: var(--text-light);
       font-size: 0.9rem;
     }
-
     .project-actions {
       padding: 0 1.5rem 1.5rem;
       display: flex;
       gap: 0.5rem;
     }
-
     /* Skills Section */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 2rem;
     }
-
     .skill {
       background: var(--white);
       padding: 1.5rem;
       border-radius: 8px;
       box-shadow: var(--shadow);
     }
-
     .skill h4 {
       color: var(--primary);
       margin-bottom: 1rem;
       font-size: 1.1rem;
     }
-
     .skill ul {
       list-style-type: none;
     }
-
     .skill li {
       padding: 0.5rem 0;
       border-bottom: 1px solid #eee;
     }
-
     .skill li:last-child {
       border-bottom: none;
     }
-
     /* Contact Section */
     .contact-form {
       max-width: 600px;
     }
-
     .row {
       display: flex;
       gap: 1rem;
       margin-bottom: 1rem;
     }
-
     .row input {
       flex: 1;
     }
-
     .contact-form input,
     .contact-form textarea {
       width: 100%;
@@ -291,11 +245,9 @@
       border-radius: 4px;
       font-family: 'Lato', sans-serif;
     }
-
     .contact-form button {
       margin-top: 1rem;
     }
-
     /* Footer */
     .site-footer {
       background-color: var(--primary);
@@ -303,28 +255,23 @@
       text-align: center;
       padding: 2rem 0;
     }
-
     .footer-social {
       display: flex;
       justify-content: center;
       gap: 1rem;
       margin: 1.5rem 0;
     }
-
     .footer-social a {
       display: inline-block;
       transition: var(--transition);
     }
-
     .footer-social a:hover {
       transform: translateY(-3px);
     }
-
     .footer-social img {
       height: 28px; /* Keep original size in footer */
       border-radius: 4px;
     }
-
     /* Lightbox */
     .lightbox {
       position: fixed;
@@ -338,17 +285,14 @@
       align-items: center;
       z-index: 1000;
     }
-
     .lightbox.active {
       display: flex;
     }
-
     .lightbox-inner {
       position: relative;
       max-width: 90%;
       max-height: 90%;
     }
-
     .lb-close {
       position: absolute;
       top: -40px;
@@ -359,19 +303,16 @@
       font-size: 2rem;
       cursor: pointer;
     }
-
     #lb-img {
       max-width: 100%;
       max-height: 80vh;
       display: block;
     }
-
     #lb-caption {
       color: var(--white);
       text-align: center;
       margin-top: 1rem;
     }
-
     /* Responsive */
     @media (max-width: 768px) {
       .header-inner {
@@ -379,19 +320,16 @@
         text-align: center;
         gap: 1rem;
       }
-
       .social {
         gap: 0.8rem;
       }
-
       .social img {
         height: 24px; /* Slightly larger on mobile for better touch targets */
       }
-
       .row {
         flex-direction: column;
       }
-      
+     
       .about-actions {
         flex-direction: column;
       }
@@ -405,7 +343,6 @@
         <h1 class="name">Bishnu Datta Pant</h1>
         <p class="title">Data Analyst | GIS Expert</p>
       </div>
-
       <nav class="social">
         <a href="https://www.linkedin.com/in/contactbishnupant" target="_blank" title="LinkedIn">
           <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -422,7 +359,6 @@
       </nav>
     </div>
   </header>
-
   <main class="container">
     <!-- About -->
     <section id="about" class="section about">
@@ -439,43 +375,27 @@
         </div>
       </div>
     </section>
-
     <!-- Projects -->
     <section id="projects" class="section">
       <h2>Projects</h2>
       <div class="projects-grid">
 
-        <!-- Project card: Domino's Sales Dashboard -->
+        <!-- 1. Georeferencing (NEWEST – TOP) -->
         <article class="project-card">
           <figure class="project-figure">
-            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/1739628784617.jpeg" alt="Domino's Sales Dashboard" loading="lazy">
+            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/Georeferencing_project.jpg" alt="Georeferencing & Digitisation" loading="lazy">
             <figcaption>
-              <h3>Domino's Sales Dashboard</h3>
-              <p>Comprehensive Power BI dashboard analyzing Domino's sales performance, customer trends, and product insights to drive business decisions.</p>
+              <h3>Georeferencing</h3>
+              <p>Used Google Earth Pro for the extraction of the AOI, and ArcGIS was used to do georeferencing </p>
             </figcaption>
           </figure>
           <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/1739628784617.jpeg" data-caption="Domino's Sales Dashboard">Preview</button>
-            <a class="btn" href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/1739628784617.jpeg" target="_blank">View Details</a>
+            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/Georeferencing_project.jpg" data-caption="Georeferencing ">Preview</button>
+            <a class="btn" href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/Georeferencing_project.jpg" target="_blank">View Details</a>
           </div>
         </article>
 
-        <!-- Project card: Mobile Sales Dashboard -->
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/market%20sales_page-0003.jpg" alt="Mobile Sales Dashboard" loading="lazy">
-            <figcaption>
-              <h3>Mobile Sales Dashboard</h3>
-              <p>Interactive Power BI dashboard tracking mobile device sales performance, market trends, and regional distribution patterns.</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/market%20sales_page-0003.jpg" data-caption="Mobile Sales Dashboard">Preview</button>
-            <a class="btn" href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/market%20sales_page-0003.jpg" target="_blank">View Details</a>
-          </div>
-        </article>
-
-        <!-- Project card: Manual Data Integration -->
+        <!-- 2. Manual Data Integration -->
         <article class="project-card">
           <figure class="project-figure">
             <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/Manual%20data%20integration.jpg" alt="Manual Data Integration Dashboard" loading="lazy">
@@ -490,7 +410,7 @@
           </div>
         </article>
 
-        <!-- Project card: Mount Everest / Socio-Economic Analysis -->
+        <!-- 3. Himalayan Expedition Dashboard -->
         <article class="project-card">
           <figure class="project-figure">
             <img src="https://raw.githubusercontent.com/Bishnu324/Himalayan-data-analysis/main/Mount%20everest_page-0001.jpg" alt="Socio-Economic Analysis dashboard" loading="lazy">
@@ -505,13 +425,13 @@
           </div>
         </article>
 
-        <!-- Project card: GIS Dashboard -->
+        <!-- 4. GIS Study Area Mapping -->
         <article class="project-card">
           <figure class="project-figure">
             <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/mapping.jpg" alt="GIS Dashboard" loading="lazy">
             <figcaption>
               <h3>GIS study area mapping</h3>
-              <p>Mapping using shapefiles and land use  data to show land use trends.</p>
+              <p>Mapping using shapefiles and land use data to show land use trends.</p>
             </figcaption>
           </figure>
           <div class="project-actions">
@@ -522,7 +442,6 @@
 
       </div> <!-- .projects-grid -->
     </section>
-
     <!-- Skills -->
     <section id="skills" class="section">
       <h2>Technical Skillset</h2>
@@ -541,7 +460,6 @@
             <li>Interactive Dashboards & Visualization</li>
           </ul>
         </div>
-
         <div class="skill">
           <h4>Python Libraries</h4>
           <ul>
@@ -553,7 +471,6 @@
             <li>GeoPandas</li>
           </ul>
         </div>
-
         <div class="skill">
           <h4>Tools & Technologies</h4>
           <ul>
@@ -562,7 +479,6 @@
             <li><strong>GIS & Mapping:</strong> QGIS,ArcGIS</li>
           </ul>
         </div>
-
         <div class="skill">
           <h4>Data Analysis & Modeling</h4>
           <ul>
@@ -573,7 +489,6 @@
         </div>
       </div>
     </section>
-
     <!-- Experience & Education -->
     <section id="experience" class="section">
       <h2>Experience & Education</h2>
@@ -585,7 +500,6 @@
             <li><strong>Intermediate (High School)</strong><br>National Academy of Science and Technology (2016-2018)</li>
           </ul>
         </div>
-
         <div class="skill">
           <h4>Professional Experience</h4>
           <ul>
@@ -593,7 +507,6 @@
             <li><strong>Global Virtual Internship</strong><br>IIDE (Jun 2024)</li>
           </ul>
         </div>
-
         <div class="skill">
           <h4>Certifications</h4>
           <ul>
@@ -604,7 +517,6 @@
         </div>
       </div>
     </section>
-
     <!-- Contact -->
     <section id="contact" class="section">
       <h2>Contact</h2>
@@ -622,11 +534,10 @@
       </form>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2025 Bishnu Datta Pant. All rights reserved.</p>
-      
+     
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/contactbishnupant" target="_blank" title="LinkedIn">
           <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -641,13 +552,12 @@
           <img src="https://img.shields.io/badge/CV-Download-green?style=flat&logo=adobeacrobatreader&logoColor=white" alt="Download CV" />
         </a>
       </div>
-      
+     
       <p style="margin-top: 1rem;">
         <a href="https://github.com/Bishnu324/Bishnu324.github.io/raw/main/CURRICULUM%20VITAE%20..pdf" download="Bishnu_Datta_Pant_CV.pdf" class="btn btn-outline" style="color: white; border-color: white;">Download CV</a>
       </p>
     </div>
   </footer>
-
   <!-- Lightbox modal -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <div class="lightbox-inner">
@@ -656,7 +566,6 @@
       <p id="lb-caption"></p>
     </div>
   </div>
-
   <script>
     // Lightbox functionality
     document.addEventListener('DOMContentLoaded', function() {
@@ -665,24 +574,24 @@
       const lbCaption = document.getElementById('lb-caption');
       const lbClose = document.getElementById('lb-close');
       const previewBtns = document.querySelectorAll('.preview-btn');
-      
+     
       // Open lightbox
       previewBtns.forEach(btn => {
         btn.addEventListener('click', function() {
           const imgSrc = this.getAttribute('data-src');
           const caption = this.getAttribute('data-caption');
-          
+         
           lbImg.src = imgSrc;
           lbCaption.textContent = caption;
           lightbox.classList.add('active');
         });
       });
-      
+     
       // Close lightbox
       lbClose.addEventListener('click', function() {
         lightbox.classList.remove('active');
       });
-      
+     
       // Close the lightbox when clicking outside the image
       lightbox.addEventListener('click', function(e) {
         if (e.target === lightbox) {
