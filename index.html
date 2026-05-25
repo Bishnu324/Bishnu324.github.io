@@ -1,228 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bishnu Datta Pant | Data Analyst & GIS Expert</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    :root{--primary:#2c5530;--primary-light:#4a7c59;--secondary:#f8f9fa;--accent:#e76f51;--text:#333;--text-light:#6c757d;--white:#fff;--shadow:0 4px 6px rgba(0,0,0,.1);--transition:all .3s ease}
-    body{font-family:'Lato',sans-serif;line-height:1.6;color:var(--text);background:var(--secondary)}
-    h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--primary)}
-    h2{font-size:2rem;position:relative;display:inline-block;margin-bottom:2rem}
-    h2::after{content:'';position:absolute;bottom:-8px;left:0;width:60px;height:3px;background:var(--accent)}
-    p{margin-bottom:1rem}
-    .container{width:90%;max-width:1200px;margin:0 auto}
-    .section{padding:4rem 0}
-    .btn{display:inline-block;padding:.6rem 1.2rem;background:var(--primary);color:var(--white);text-decoration:none;border:none;border-radius:4px;cursor:pointer;transition:var(--transition);font-size:.9rem}
-    .btn:hover{background:var(--primary-light);transform:translateY(-2px)}
-    .btn-outline{background:transparent;border:1px solid var(--primary);color:var(--primary)}
-    .btn-outline:hover{background:var(--primary);color:var(--white)}
-    .site-header{background:var(--primary);color:var(--white);padding:1.5rem 0;box-shadow:var(--shadow);position:sticky;top:0;z-index:100}
-    .header-inner{display:flex;justify-content:space-between;align-items:center}
-    .name{font-size:1.8rem;margin-bottom:.2rem}
-    .title{font-size:1rem;opacity:.9}
-    .social{display:flex;gap:.6rem}
-    .social img{height:22px;border-radius:4px}
-    .about{display:flex;flex-wrap:wrap;gap:2rem;align-items:center}
-    .about-left{flex:1;min-width:300px;display:flex;justify-content:center}
-    .profile-photo{width:250px;height:250px;border-radius:50%;object-fit:cover;border:5px solid var(--primary-light);box-shadow:var(--shadow)}
-    .about-right{flex:2;min-width:300px}
-    .about-actions{margin-top:1.5rem;display:flex;gap:1rem}
-    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem}
-    .project-card{background:var(--white);border-radius:8px;overflow:hidden;box-shadow:var(--shadow);transition:var(--transition)}
-    .project-card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.15)}
-    .project-figure img{width:100%;height:200px;object-fit:cover}
-    .project-figure figcaption{padding:1.5rem}
-    .project-figure h3{font-size:1.2rem;margin-bottom:.5rem}
-    .project-figure p{color:var(--text-light);font-size:.9rem}
-    .project-actions{padding:0 1.5rem 1.5rem;display:flex;gap:.5rem}
-    .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2rem}
-    .skill{background:var(--white);padding:1.5rem;border-radius:8px;box-shadow:var(--shadow)}
-    .skill h4{color:var(--primary);margin-bottom:1rem;font-size:1.1rem}
-    .skill ul{list-style:none}
-    .skill li{padding:.5rem 0;border-bottom:1px solid #eee}
-    .skill li:last-child{border:none}
-    .contact-form{max-width:600px}
-    .row{display:flex;gap:1rem;margin-bottom:1rem}
-    .row input{flex:1}
-    .contact-form input,.contact-form textarea{width:100%;padding:.8rem;border:1px solid #ddd;border-radius:4px;font-family:'Lato',sans-serif}
-    .contact-form button{margin-top:1rem}
-    .site-footer{background:var(--primary);color:var(--white);text-align:center;padding:2rem 0}
-    .footer-social{display:flex;justify-content:center;gap:1rem;margin:1.5rem 0}
-    .footer-social img{height:28px;border-radius:4px}
-    .lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);display:none;justify-content:center;align-items:center;z-index:1000}
-    .lightbox.active{display:flex}
-    .lightbox-inner{position:relative;max-width:90%;max-height:90%}
-    .lb-close{position:absolute;top:-40px;right:0;background:none;border:none;color:var(--white);font-size:2rem;cursor:pointer}
-    #lb-img{max-width:100%;max-height:80vh;display:block;border:5px solid #fff;border-radius:8px}
-    #lb-caption{color:var(--white);text-align:center;margin-top:1rem}
-    @media(max-width:768px){.header-inner{flex-direction:column;text-align:center;gap:1rem}.about-actions{flex-direction:column}.row{flex-direction:column}}
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id='favicon' rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png">
+
+    <title>Experience | Portfolio Jigar Sable</title>
 </head>
-<body>
+<body oncontextmenu="return false">
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <div>
-        <h1 class="name">Bishnu Datta Pant</h1>
-        <p class="title">Data Analyst | GIS Expert</p>
-      </div>
-      <nav class="social">
-        <a href="https://www.linkedin.com/in/contactbishnupant" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-        <a href="https://github.com/Bishnu324" target="_blank"><img src="https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white" alt="GitHub"></a>
-        <a href="mailto:pantb813@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email"></a>
-        <a href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/CURRICULUM%20VITAE.pdf" download="Bishnu_Datta_Pant_CV.pdf"><img src="https://img.shields.io/badge/CV-Download-green?style=flat&logo=adobeacrobatreader&logoColor=white" alt="CV"></a>
-      </nav>
-    </div>
-  </header>
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo"><i class="fab fa-node-js"></i> Jigar</a>
 
-  <main class="container">
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#skills">Skills</a></li>
+            <li><a href="/#education">Education</a></li>
+            <li><a href="/#work">Work</a></li>
+            <li><a class="active" href="/#experience">Experience</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
 
-    <section id="about" class="section about">
-      <div class="about-left">
-        <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/profile%20.jpg" alt="Bishnu" class="profile-photo">
-      </div>
-      <div class="about-right">
-        <h2>About Me</h2>
-        <p> I'm an experienced Data Analyst and Geospatial Enthusiast with expertise in transforming complex datasets into actionable insights through Python, Power BI, and GIS tools. My unique blend of data analytics and agriculture/environmental domain knowledge allows me to deliver impactful solutions across diverse projects.
+<!-- experience section starts -->
+<section class="experience" id="experience">
 
-        <p>Bachelor's in Agricultural Science | Passionate about data-driven solutions</p>
-        <div class="about-actions">
-          <a href="#projects" class="btn">View Projects</a>
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
+  <div class="quote">
+      <span>every experience in your life is being orchestrated to teach you something you need to know to move forward.</span>
+  </div>
+
+  <div class="timeline">
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Self Employed</h2>
+        </div>
+        <div class="desc">
+            <h3>Full Stack Developer</h3>
+            <p>Oct 2021 - present</p>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- UPGRADED PROJECTS SECTION -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-
-      <h3 style="color:var(--primary);margin:2rem 0 1rem;font-size:1.6rem">Data Analysis and Power BI</h3>
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/1739628784617.jpeg" alt="Mobile Sales" loading="lazy">
-            <figcaption>
-              <h3>Domino's Pizza  Sales Dashboard</h3>
-              <p>Power BI | Periodic growth, region heatmap, top-10 sellers.</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/1739628784617.jpeg" data-caption="Mobile Sales Dashboard">Preview</button>
-            <a class="btn" href="https://github.com/Bishnu324/power-BI-mobile-sale-dashboard-" target="_blank">Repo</a>
+    <div class="container right">
+        <div class="content">
+          <div class="tag">
+            <h2>DevIncept (Top Contributor)</h2>
           </div>
-        </article>
-
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/market%20sales_page-0003.jpg" alt="Zepto" loading="lazy">
-            <figcaption>
-              <h3>Mobile sales dashboard</h3>
-              <p>Power BI | Lead-time, turnover, cost-per-order KPIs. were vizualized</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/market%20sales_page-0003.jpg" data-caption="Zepto Supply Chain">Preview</button>
-            <a class="btn" href="https://github.com/Bishnu324/Zepto-supply-chain-analysis" target="_blank">Repo</a>
+          <div class="desc">
+              <h3>DCP 2021 Contributor | Open Source Program</h3>
+              <p>July 2021 - October 2021</p>
           </div>
-        </article>
-
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://raw.githubusercontent.com/Bishnu324/Himalayan-data-analysis/main/Mount%20everest_page-0001.jpg" alt="Himalayan" loading="lazy">
-            <figcaption>
-              <h3>Himalayan Expeditions</h3>
-              <p>Power BI | Nationality & age trends of 8,000m climbers were analyzed using Power BI.</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Himalayan-data-analysis/main/Mount%20everest_page-0001.jpg" data-caption="Himalayan Expeditions">Preview</button>
-            <a class="btn" href="https://github.com/Bishnu324/Himalayan-data-analysis" target="_blank">Repo</a>
-          </div>
-        </article>
-
+        </div>
       </div>
 
-      <h3 style="color:var(--primary);margin:2rem 0 1rem;font-size:1.6rem">GIS and  Spatial Mapping</h3>
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/Georeferencing_project.jpg" alt="Georeferencing" loading="lazy">
-            <figcaption>
-              <h3>Georeferencing</h3>
-              <p>Google Earth Pro is used to extract an imagery file then it was then georeferenced with the help of ArcGIS</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/Georeferencing_project.jpg" data-caption="Georeferencing">Preview</button>
-            <a class="btn" href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/Georeferencing_project.jpg" target="_blank">Map</a>
+      <div class="container left">
+        <div class="content">
+          <div class="tag">
+            <h2>LetsGrowMore Summer of Code</h2>
           </div>
-        </article>
-
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/Manual%20data%20integration.jpg" alt="Manual GIS" loading="lazy">
-            <figcaption>
-              <h3>Manual GIS data Integration</h3>
-              <p>QGIS | Data was cleaned & integrated using QGIS</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/Manual%20data%20integration.jpg" data-caption="Manual Integration">Preview</button>
-            <a class="btn" href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/Manual%20data%20integration.jpg" target="_blank">Map</a>
+          <div class="desc">
+              <h3>LGM-SOC'21 Participant | Open Source Program</h3>
+              <p>June 2021 - August 2021</p>
           </div>
-        </article>
-
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/mapping.jpg" alt="LULC" loading="lazy">
-            <figcaption>
-              <h3>Mapping</h3>
-              <p>Mapping on shapefiles | LULC mapping. using QGIS</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://raw.githubusercontent.com/Bishnu324/Bishnu324.github.io/main/mapping.jpg" data-caption="LULC Map">Preview</button>
-            <a class="btn" href="https://github.com/bishnudattapant/gis-dashboard" target="_blank">Repo</a>
-          </div>
-        </article>
-
-        <!-- NEW DIGITIZATION PROJECT -->
-        <article class="project-card">
-          <figure class="project-figure">
-            <img src="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/Digitization.jpg?raw=true" alt="Digitization" loading="lazy">
-            <figcaption>
-              <h3>Digitization</h3>
-              <p>Digitization of the pond and major route from Google Earth pro</p>
-            </figcaption>
-          </figure>
-          <div class="project-actions">
-            <button class="btn preview-btn" data-src="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/Digitization.jpg?raw=true" data-caption="Digitization Project">Preview</button>
-            <a class="btn" href="https://github.com/Bishnu324/Bishnu324.github.io/blob/main/Digitization.jpg" target="_blank">Map</a>
-          </div>
-        </article>
-
+        </div>
       </div>
-    </section>
 
-    <!-- Keep all your original sections below -->
-    <section id="skills" class="section">
-      <h2>Technical Skillset</h2>
-      <div class="skills-grid">
-        <div class="skill"><h4>Core Skills</h4><ul><li>Proficiency in Python and QGIS</li><li>GIS Mapping & Spatial Analysis</li><li>Geo-referencing</li><li>Feature Extraction</li><li>Cartographic Design & Map Production</li><li>Land Use/Land Cover (LULC) Classification & Mapping</li><li>Remote Sensing Data Interpretation</li><li>Data Cleaning & EDA</li><li>Interactive Dashboards</li></ul></div>
-        <div class="skill"><h4>Python Libraries</h4><ul><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>matplotlib</li><li>seaborn</li><li>GeoPandas</li></ul></div>
-        <div class="skill"><h4>Tools</h4><ul><li>Python</li><li>Power BI, Excel</li><li>QGIS, ArcGIS</li></ul></div>
-        <div class="skill"><h4>Data Analysis</h4><ul><li>Power Query (M)</li><li>DAX</li><li>ETL Processes</li></ul></div>
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Mapstreak Flyseas</h2>
+        </div>
+        <div class="desc">
+            <h3>Web Developer | Internship</h3>
+            <p>June 2021 - Dec 2021</p>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <section id="experience" class="section">
-      <h2>Experience And  Education</h2>
-      <div class="skills-grid">
-        <div class="skill"><h4>Education</h4><ul><li><strong>Bachelor's in Agricultural Science</strong><br>Institute of Agriculture and Animal Science, TU (2019-2023)</li><li><strong>High School</strong><br>National Academy of Science and Technology (2016-2018)</li></ul></div>
-        <div class="skill"><h4>Experience</h4><ul><li><strong>Social Media Intern</strong><br>Agricultural Technology Center, Lalitpur (Mar-Jul 2025)</li><li><strong>Global Virtual Internship</strong><br>IIDE (Jun 
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>The Spark Foundation</h2>
+        </div>
+        <div class="desc">
+            <h3>Website Developer | Internship</h3>
+            <p>May 2021 - June 2021</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>The Spark Foundation</h2>
+        </div>
+        <div class="desc">
+            <h3>Mobile Application Developer | Internship</h3>
+            <p>April 2021 - May 2021</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Frshr Technologies</h2>
+        </div>
+        <div class="desc">
+            <h3>Wordpress Developer | Internship</h3>
+            <p>April 2021 - April 2021</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>WonderingBlog</h2>
+        </div>
+        <div class="desc">
+            <h3>Web Development & SEO | Internship</h3>
+            <p>March 2021 - April 2021</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+        <div class="content">
+          <div class="tag">
+            <h2>Hacktoberfest 2020</h2>
+          </div>
+          <div class="desc">
+              <h3>Contributor | Open Source Program</h3>
+              <p>October 2020 - November 2020</p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="morebtn">
+    <a href="/#experience" class="btn">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Home</span>
+  </a>
+  </div>
+
+</div>
+</section>
+<!-- experience section ends -->
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Jigar's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="/#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="/#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="/#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="/#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="/#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+          <a href="/#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+91 704-302-4736</p>
+          <p> <i class="fas fa-envelope"></i>jigarsable21@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Pune, India-412206</p>
+          <div class="share">
+
+            <a href="https://www.linkedin.com/in/jigar-sable" class="fab fa-linkedin" target="_blank"></a>
+            <a href="https://github.com/jigar-sable" class="fab fa-github" target="_blank"></a>
+            <a href="mailto:jigarsable21@gmail.com" class="fas fa-envelope" target="_blank"></a>
+            <a href="https://twitter.com/jigar_sable" class="fab fa-twitter" target="_blank"></a>
+            <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" target="_blank"></a>
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/jigar-sable"> jigar sable</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+<!-- scroll top btn -->
+<a href="#experience" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./script.js"></script>
+
+</body>
+</html>
